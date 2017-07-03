@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery TextSlider Plugin</title>
+<link media="screen" rel="stylesheet" type="text/css" href="css/textslider.css" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.textslider.min.js"></script>
+<script type="text/javascript">//<![CDATA[
+$(document).ready(function(){
+    $('.slideText').textslider({
+        direction : 'scrollUp', // 捲動方向: scrollUp向上, scrollDown向下
+        scrollNum : 1, // 一次捲動幾個元素
+        scrollSpeed : 800, // 捲動速度(ms)
+        pause : 3200 // 停頓時間(ms)
+    });
+});
+//]]></script>
+</head>
+
+<body>
+    <div class="slideText">
+        <ul>
+            <li><a href="#">集中V胸罩 秀美腿褲裙 超美呦絲襪 吸引人洋裝 型男長腿褲</a></li>
+            <li><a href="#">性感女神褲襪 復古短靴 甜心短裙 心動露肩洋 暖暖室內鞋</a></li>
+            <li><a href="#">經典晚宴絲襪 學院窄裙 頂級細跟鞋 放電大眼妝 寶貝超Q服</a></li>
+        </ul>
+    </div>
+</body>
+</html>
