@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Simple Layout Demo</title>
 <script type="text/javascript" src="plugin/jquery.min.js"></script>
-<link href="indez.css" rel="stylesheet" type="text/css" />
+<link href="index.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="plugin/FlexSlider/flexslider.css" type="text/css" media="screen" />
 <script defer src="plugin/FlexSlider/jquery.flexslider.js"></script>
 <!--slider include END-->
@@ -59,10 +59,10 @@
 </div>
     <div  class='black-word'></div>
     
-	<iframe  style='overflow: visible; width: 102%; height: 700px; display: block; position: relative; visibility: visible; z-index: 0; top: -8px; left: -1%;' scrolling="no" src="pic_file.php"  frameBorder="0">
+	<iframe  style='overflow: visible; width: 102%; height: 700px; display: block; position: relative; visibility: visible; z-index: 0; top: -8px; left: -1%;' scrolling="no" src="main.php"  frameBorder="0">
   <p>Your browser does not support iframes.</p>
 	</iframe>
-<iframe  style='margin-top: -15px; width: 100%; height: 450px; background-color:#FF9900;' scrolling="no" src="marqee2.php"  frameBorder="0">
+<iframe  style='margin-top: -15px; width: 100%; height: 450px; background-color:#FF9900;' scrolling="no" src="marquee.php"  frameBorder="0">
   <p>Your browser does not support iframes.</p>
 	</iframe>
 <div id='results_icon' class='weather_icon'></div>

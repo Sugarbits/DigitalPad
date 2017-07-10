@@ -68,7 +68,7 @@ fclose($myfile);
 <textarea id="word" rows="10" cols="50">
 </textarea>
 <BR>
-<button onclick='ajax_text_word();'>修改</button>
+<button id="word_fix">修改</button>
 	</div>
   </div>
 
@@ -76,8 +76,13 @@ fclose($myfile);
 
 
 <script>
- function ajax_text(data){
-	var scriptUrl = "../ajax_text.php";
+//const field-url set
+const self_config={
+	
+}
+//const field-url set END
+ function ajax_piclist_write(data){
+	var scriptUrl = "../ajax_piclist_write.php";
 	//var scriptUrl = "../test.php";
 	//JSON.parse
 	data = JSON.parse(JSON.stringify(data));
@@ -98,8 +103,8 @@ fclose($myfile);
 	//alert(data);
 	console.log(result);
 }
-  function ajax_del_text(target,data){
-	var scriptUrl = "../ajax_del_text.php";
+  function ajax_piclist_del(target,data){
+	var scriptUrl = "../ajax_piclist_del.php";
 	//var scriptUrl = "../test.php";
 	//JSON.parse
 	data = JSON.parse(JSON.stringify(data));
@@ -120,10 +125,8 @@ fclose($myfile);
 	//alert(data);
 	console.log(result);
 } 
-  function ajax_text_r(){
-	var scriptUrl = "../ajax_text_r.php";
-	//var scriptUrl = "../test.php";
-	//JSON.parse
+  function ajax_text_jsonread(){
+	var scriptUrl = "../ajax_text_jsonread.php";
 	$.ajax({
 		url: scriptUrl,
 		type: 'get',
@@ -139,9 +142,8 @@ fclose($myfile);
 	//alert(data);
 	return result;
 } 
-function ajax_text_word(){
-	data = $('#word').val();
-	var scriptUrl = "../ajax_text_word.php";
+function ajax_text_write(data){
+	var scriptUrl = "../ajax_text_write.php";
 
 	$.ajax({
 		url: scriptUrl,
@@ -160,10 +162,8 @@ function ajax_text_word(){
 	//alert(data);
 	console.log(result);
 } 
-  function ajax_text_word_r(){
-	var scriptUrl = "../ajax_text_word_r.php";
-	//var scriptUrl = "../test.php";
-	//JSON.parse
+  function ajax_text_read(){
+	var scriptUrl = "../ajax_text_read.php";
 	$.ajax({
 		url: scriptUrl,
 		type: 'get',
@@ -182,7 +182,7 @@ function ajax_text_word(){
 $(document).ready(function (e) {
 
 
-$('#word').val(ajax_text_word_r());
+$('#word').val(ajax_text_read());
 	
 $("#upload_form").on( "submit", function(event) {//on form submit
     if(!window.File && window.FileReader && window.FileList && window.Blob){ //if browser doesn't supports File API
@@ -221,11 +221,16 @@ function del_grid(tb_id,gr_id){
 		for(key in obj){
 			textarr.push(obj[key]["name"]);
 		}
-			ajax_del_text(target,JSON.stringify(textarr));
+			ajax_piclist_del(target,JSON.stringify(textarr));//clr
 
 }
   $( function() {
-    $( "#tabs" ).tabs();
+	$( "#tabs" ).tabs();
+	$( "#word_fix" ).click(function() {
+		data = $('#word').val();
+		ajax_text_write(data);
+	});
+
 //跑馬燈字
 
 //跑馬燈字 END	
@@ -300,7 +305,7 @@ var mydata = JSON.parse(JSON.stringify(<?php echo json_encode($arr);?>));
 		for(key in obj){
 			textarr.push(obj[key]["name"]);
 		}
-			ajax_text(JSON.stringify(textarr));
+			ajax_piclist_write(JSON.stringify(textarr));
 		});
 	//change event over
 </script>
@@ -371,7 +376,7 @@ $(my_form_id).on( "submit", function(event) {
 				$(result_output).html(res); //output response from server
 				submit_btn.val("Upload").prop( "disabled", false); //enable submit button once ajax is done
 				//更新list
-				var newdata = JSON.parse(ajax_text_r());
+				var newdata = JSON.parse(ajax_text_jsonread());
 				//console.log(newdata);
 				$("#list4").clearGridData();
 				for(var i=0;i<=newdata.length;i++)
