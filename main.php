@@ -6,6 +6,12 @@
 <link href="index.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="plugin/FlexSlider/flexslider.css" type="text/css" media="screen" />
 <style>
+body {
+	margin: 0px;
+	overflow:hidden;
+	padding: 0;
+	background:#00FF00;
+}
 .flexslider{
 	background:none;
 	border:none;
