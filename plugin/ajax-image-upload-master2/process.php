@@ -39,7 +39,11 @@ if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
 
 //specify uploaded file variable
 $config["file_data"] = $_FILES["__files"]; 
+<<<<<<< HEAD
 var_dump($_FILES);
+=======
+
+>>>>>>> 17ec98396429877fbaaa8969ccf501cca2b48454
 
 //include sanwebe impage resize class
 include("resize.class.php"); 

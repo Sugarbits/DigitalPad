@@ -5,6 +5,7 @@
 <script src="../plugin/jqGrid/src/i18n/grid.locale-en.js" type="text/javascript"></script>
 <script src="../plugin/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
 <script src="../plugin/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<<<<<<< HEAD
 <style>
 .clearfix {
   overflow: auto;
@@ -22,6 +23,8 @@
 }
 .div_b iframe {display: block; width: 100%; height: 100%; border: none;}
 </style>
+=======
+>>>>>>> 17ec98396429877fbaaa8969ccf501cca2b48454
 </head>
 
 <?php
@@ -83,6 +86,7 @@ fclose($myfile);
 <button id="word_fix">修改</button>
 	</div>
   <div id="tabs-2">
+<<<<<<< HEAD
   <div class='clearfix'>
 	<div class='div_a'>
 		<iframe  style='overflow: visible; display: block; position: relative; visibility: visible; z-index: 0;' scrolling="no" src="../new_picture_tb.php"  frameBorder="0">
@@ -96,6 +100,18 @@ fclose($myfile);
 	</div>
  </div>
 </div>
+=======
+	 <?php echo $tb;?>
+		<div class="form-wrap">
+		<h3>Ajax Image Uploader</h3>
+			<form action="../plugin/ajax-image-upload-master/process.php" method="post" enctype="multipart/form-data" id="upload_form">
+			<input name="__files[]" type="file" multiple />
+			<input name="__submit__" type="submit" value="Upload"/>
+			</form>
+    <div id="output"><!-- error or success results --></div>
+</div>
+	</div>
+>>>>>>> 17ec98396429877fbaaa8969ccf501cca2b48454
   <div id="tabs-3">
 	 <?php echo $tb;?>
 		<div class="form-wrap">
