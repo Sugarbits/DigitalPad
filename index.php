@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Simple Layout Demo</title>
 <script type="text/javascript" src="plugin/jquery.min.js"></script>
-<link href="index.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="plugin/FlexSlider/flexslider.css" type="text/css" media="screen" />
 <script defer src="plugin/FlexSlider/jquery.flexslider.js"></script>
 <!--slider include END-->
