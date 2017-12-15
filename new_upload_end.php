@@ -6,6 +6,6 @@ if(empty($_FILES) || $_FILES["file"]["error"]) {
 $fileName = $_FILES["file"]["name"];
 $ext = end(explode('.', $fileName));
 $desFileName = md5(uniqid()).'.'.$ext;
-move_uploaded_file($_FILES["file"]["tmp_name"], "upload/$desFileName");
+move_uploaded_file($_FILES["file"]["tmp_name"], "upload_v/$desFileName");
 die('{"OK": 1}');
 ?>
