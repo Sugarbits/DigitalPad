@@ -98,7 +98,6 @@ $(function() {
 	$('#form').submit(function(e) {
 		// Files in queue upload them first
 		if ($('#uploader').plupload('getFiles').length > 0) {
-
 			// When all files are uploaded submit form
 			$('#uploader').on('complete', function() {
 				$('#form')[0].submit();
