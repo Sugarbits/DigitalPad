@@ -105,21 +105,3 @@
 </div>
 </body>
 </html>
-<script>
- ajax();
- console.log($.ajax({url:"new_data.php",async:false}));
-function ajax(){
-   $.ajax({
-  url: "new_data.php",
-  type :"GET",
-  dataType :"text",
-  //data:{},
-  cache: false
-}).done(function( html ) {
-	// var obj = JSON.parse(html);
-	 //var obj = JSON.parse(html);
-	 console.log(html);
-	 //return result;
-  });
- }
-</script>
